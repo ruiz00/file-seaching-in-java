@@ -4,15 +4,15 @@ A multithreaded command-line tool that recursively searches every file in a dire
 
 ## Features
 
-- 🔍 Recursive search through nested folders
-- ⚡ Parallel traversal using `ForkJoinPool` / `RecursiveTask` — scales with available CPU cores
-- 📄 Case-insensitive keyword matching
-- 🧮 Regex search mode (`-r`)
-- 🗂️ Extension filtering (`--ext`)
-- 🪜 Recursion depth limiting (`--max-depth`)
-- 💾 Write results to a file (`--output`)
-- 🛡️ Skips unreadable or binary files gracefully instead of crashing
-- 🪶 Zero external dependencies — standard library only
+- Recursive search through nested folders
+- Parallel traversal using `ForkJoinPool` / `RecursiveTask` — scales with available CPU cores
+- Case-insensitive keyword matching
+- Regex search mode (`-r`)
+- Extension filtering (`--ext`)
+- Recursion depth limiting (`--max-depth`)
+- Write results to a file (`--output`)
+- Skips unreadable or binary files gracefully instead of crashing
+- Zero external dependencies — standard library only
 
 ## Requirements
 
@@ -98,12 +98,7 @@ The tool uses Java's **Fork/Join framework** to parallelize the search:
 - Binary files are skipped silently (detected via decoding errors) rather than searched byte-by-byte
 - Regex matching uses Java's `Pattern`/`Matcher` syntax (not POSIX or PCRE)
 
-## Roadmap / ideas for contributors
 
-- [ ] Multi-keyword search (AND/OR logic)
-- [ ] Colorized console output for matches
-- [ ] Progress indicator for very large trees
-- [ ] `.gitignore`-style exclude patterns
 
 ## Contributing
 
